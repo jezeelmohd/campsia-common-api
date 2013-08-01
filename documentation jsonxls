@@ -1,0 +1,34 @@
+if ur defining title text of xls file put the name of element in titlelist as 
+	titlelist:['<name of title'>]
+if multiple titles are there use as
+	titlelist:['<name of title'>,'<title2 name'>,]
+and first title will be taken as main title
+
+if u want to add a table of contents like these
+	name	age	class
+	jez	15	12
+	manu	12	11
+
+put name of dictionary in columnlist as
+	columnlist:['<name of objct>']
+eg:	columnlist:['stdntdetails']
+
+and add the content headers in <column>attr list,here <column> means the name of column we defined before in the example before the list name should be as :studentdetailsattr
+	columnattr:['<column header1','column header2',]
+eg:	stdntdetails:['name','age','class']
+
+and add details of column as
+	'<column object name>':[
+				{
+				'<column header1>':'<values>',
+				'<column header2>':'<values>,
+				}
+
+eg:	'studentdetails':[
+			{'name':'jez','age':15,'class':12},
+			{'name':'manu','age':12,'class':11},
+			]		
+
+
+
+and if u have more than one object in the json list each object will be saved as filename<increment no> like hostel1.xls ,hostel2.xls like that
